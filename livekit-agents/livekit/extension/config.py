@@ -17,10 +17,10 @@ class InterruptConfig:
     )))
 
     # Minimum average confidence to treat a chunk as real speech while agent is speaking
-    asr_conf_min: float = float(os.getenv("ASR_CONF_MIN", "0.55"))
+    asr_conf_min: float = float(os.getenv("ASR_CONF_MIN", "0.5"))
 
     # When agent is speaking, ignore chunk if ≥ this fraction are fillers and no priority words
-    filler_ratio_min: float = float(os.getenv("FILLER_RATIO_MIN", "0.7"))
+    filler_ratio_min: float = float(os.getenv("FILLER_RATIO_MIN", "0.75"))
 
     # If True, log detailed decisions
     debug_logging: bool = os.getenv("INTERRUPT_DEBUG", "1") == "1"
